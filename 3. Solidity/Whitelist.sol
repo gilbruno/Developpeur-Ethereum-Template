@@ -10,6 +10,8 @@ contract Whitelist {
         uint age;
     }
 
+    Person[] public persons;
+
     function addPerson(string memory _name, uint _age) public pure returns (Person memory) {
         Person memory p = Person(_name, _age);
         return p;
