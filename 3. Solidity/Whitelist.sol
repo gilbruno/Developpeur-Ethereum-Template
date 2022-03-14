@@ -3,14 +3,18 @@ pragma solidity ^0.8.12;
 
 contract Whitelist {
 
+    // Mapping "witelist"
     mapping(address => bool) whitelist;
 
+    // Struct Person
     struct Person {
         string name;
         uint age;
     }
 
-    Person[] public persons;
+    Person[] public persons; //Array of Person
+
+    event Authorized(address _address); //Event
 
     //--------------------------------------------------------------------- addPerson
     function addPerson(string memory _name, uint _age) public pure returns (Person memory) {
