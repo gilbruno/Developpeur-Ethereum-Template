@@ -6,6 +6,7 @@ contract Payable {
 
     address payable public owner;
 
+    //---------------------------------------------------- constructor
     constructor () {
         owner = payable(msg.sender);
     }
